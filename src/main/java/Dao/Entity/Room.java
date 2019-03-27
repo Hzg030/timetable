@@ -5,29 +5,29 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class Room {
-    private Long roomId;
+    private Integer roomId;
     private String roomNumber;
-    private Long buildingId;
+    private Integer buildingId;
 
     public Room() {
     }
 
-    public Room(String roomNumber, Long buildingId) {
+    public Room(String roomNumber, Integer buildingId) {
         this.roomNumber = roomNumber;
         this.buildingId = buildingId;
     }
 
-    public Room(Long roomId, String roomNumber, Long buildingId) {
+    public Room(Integer roomId, String roomNumber, Integer buildingId) {
         this.roomId = roomId;
         this.roomNumber = roomNumber;
         this.buildingId = buildingId;
     }
 
-    public Long getRoomId() {
+    public Integer getRoomId() {
         return roomId;
     }
 
-    public void setRoomId(Long roomId) {
+    public void setRoomId(Integer roomId) {
         this.roomId = roomId;
     }
 
@@ -39,11 +39,11 @@ public class Room {
         this.roomNumber = roomNumber;
     }
 
-    public Long getBuildingId() {
+    public Integer getBuildingId() {
         return buildingId;
     }
 
-    public void setBuildingId(Long buildingId) {
+    public void setBuildingId(Integer buildingId) {
         this.buildingId = buildingId;
     }
 }

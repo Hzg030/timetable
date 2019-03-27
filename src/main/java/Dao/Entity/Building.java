@@ -5,7 +5,7 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class Building {
-    private Long buildingId;
+    private Integer buildingId;
     private String name;
     private String location;
     private String state;
@@ -13,7 +13,7 @@ public class Building {
     public Building() {
     }
 
-    public Building(Long buildingId, String name, String location, String state) {
+    public Building(Integer buildingId, String name, String location, String state) {
         this.buildingId = buildingId;
         this.name = name;
         this.location = location;
@@ -26,11 +26,11 @@ public class Building {
         this.state = state;
     }
 
-    public Long getBuildingId() {
+    public Integer getBuildingId() {
         return buildingId;
     }
 
-    public void setBuildingId(Long buildingId) {
+    public void setBuildingId(Integer buildingId) {
         this.buildingId = buildingId;
     }
 

@@ -5,56 +5,65 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class RoomUse {
-    private Long roomUseId;
-    private Long roomId;
-    private String week;
-    private String time;
+    private Integer roomUseId;
+    private Integer roomId;
+    private Integer week;
+    private Integer time;
+    private Integer day;
 
     public RoomUse() {
     }
 
-    public RoomUse(Long roomId, String week, String time) {
+    public RoomUse(Integer roomId, Integer week, Integer time) {
         this.roomId = roomId;
         this.week = week;
         this.time = time;
     }
 
-    public RoomUse(Long roomUseId, Long roomId, String week, String time) {
+    public RoomUse(Integer roomUseId, Integer roomId, Integer week, Integer time) {
         this.roomUseId = roomUseId;
         this.roomId = roomId;
         this.week = week;
         this.time = time;
     }
 
-    public Long getRoomUseId() {
+    public Integer getRoomUseId() {
         return roomUseId;
     }
 
-    public void setRoomUseId(Long roomUseId) {
+    public void setRoomUseId(Integer roomUseId) {
         this.roomUseId = roomUseId;
     }
 
-    public Long getRoomId() {
+    public Integer getRoomId() {
         return roomId;
     }
 
-    public void setRoomId(Long roomId) {
+    public void setRoomId(Integer roomId) {
         this.roomId = roomId;
     }
 
-    public String getWeek() {
+    public Integer getWeek() {
         return week;
     }
 
-    public void setWeek(String week) {
+    public void setWeek(Integer week) {
         this.week = week;
     }
 
-    public String getTime() {
+    public Integer getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Integer time) {
         this.time = time;
+    }
+
+    public Integer getDay() {
+        return day;
+    }
+
+    public void setDay(Integer day) {
+        this.day = day;
     }
 }

@@ -5,56 +5,65 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class TeacherUse {
-    private Long teacherUseId;
-    private Long teacherId;
-    private String week;
-    private String time;
+    private Integer teacherUseId;
+    private Integer teacherId;
+    private Integer week;
+    private Integer time;
+    private Integer day;
 
     public TeacherUse() {
     }
 
-    public TeacherUse(Long teacherId, String week, String time) {
+    public TeacherUse(Integer teacherId, Integer week, Integer time) {
         this.teacherId = teacherId;
         this.week = week;
         this.time = time;
     }
 
-    public TeacherUse(Long teacherUseId, Long teacherId, String week, String time) {
+    public TeacherUse(Integer teacherUseId, Integer teacherId, Integer week, Integer time) {
         this.teacherUseId = teacherUseId;
         this.teacherId = teacherId;
         this.week = week;
         this.time = time;
     }
 
-    public Long getTeacherUseId() {
+    public Integer getTeacherUseId() {
         return teacherUseId;
     }
 
-    public void setTeacherUseId(Long teacherUseId) {
+    public void setTeacherUseId(Integer teacherUseId) {
         this.teacherUseId = teacherUseId;
     }
 
-    public Long getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(Long teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 
-    public String getWeek() {
+    public Integer getWeek() {
         return week;
     }
 
-    public void setWeek(String week) {
+    public void setWeek(Integer week) {
         this.week = week;
     }
 
-    public String getTime() {
+    public Integer getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Integer time) {
         this.time = time;
+    }
+
+    public Integer getDay() {
+        return day;
+    }
+
+    public void setDay(Integer day) {
+        this.day = day;
     }
 }

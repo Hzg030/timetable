@@ -5,45 +5,45 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class ClassMapping {
-    private Long classMappingId;
-    private Long teachingClassId;
-    private Long classId;
+    private Integer classMappingId;
+    private Integer teachingClassId;
+    private Integer classId;
 
     public ClassMapping() {
     }
 
-    public ClassMapping(Long teachingClassId, Long classId) {
+    public ClassMapping(Integer teachingClassId, Integer classId) {
         this.teachingClassId = teachingClassId;
         this.classId = classId;
     }
 
-    public ClassMapping(Long classMappingId, Long teachingClassId, Long classId) {
+    public ClassMapping(Integer classMappingId, Integer teachingClassId, Integer classId) {
         this.classMappingId = classMappingId;
         this.teachingClassId = teachingClassId;
         this.classId = classId;
     }
 
-    public Long getClassMappingId() {
+    public Integer getClassMappingId() {
         return classMappingId;
     }
 
-    public void setClassMappingId(Long classMappingId) {
+    public void setClassMappingId(Integer classMappingId) {
         this.classMappingId = classMappingId;
     }
 
-    public Long getTeachingClassId() {
+    public Integer getTeachingClassId() {
         return teachingClassId;
     }
 
-    public void setTeachingClassId(Long teachingClassId) {
+    public void setTeachingClassId(Integer teachingClassId) {
         this.teachingClassId = teachingClassId;
     }
 
-    public Long getClassId() {
+    public Integer getClassId() {
         return classId;
     }
 
-    public void setClassId(Long classId) {
+    public void setClassId(Integer classId) {
         this.classId = classId;
     }
 }

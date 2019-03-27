@@ -5,14 +5,13 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class TeachingClass {
-    private Long teachingClassId;
-    private Long teacherId;
+    private Integer teachingClassId;
+    private Integer teacherId;
     private String institute;
     private String major;
-    private String year;
-    private String team;
-    private Long totalCount;
+    private Integer totalCount;
     private String name;
+    private Integer number;
 
     public String getName() {
         return name;
@@ -25,40 +24,36 @@ public class TeachingClass {
     public TeachingClass() {
     }
 
-    public TeachingClass(Long teacherId, String institute, String major, String year, String team, Long totalCount, String name) {
+    public TeachingClass(Integer teacherId, String institute, String major, String year, String term, Integer totalCount, String name) {
         this.teacherId = teacherId;
         this.institute = institute;
         this.major = major;
-        this.year = year;
-        this.team = team;
         this.totalCount = totalCount;
         this.name = name;
     }
 
-    public TeachingClass(Long teachingClassId, Long teacherId, String institute, String major, String year, String team, Long totalCount, String name) {
+    public TeachingClass(Integer teachingClassId, Integer teacherId, String institute, String major, String year, String term, Integer totalCount, String name) {
         this.teachingClassId = teachingClassId;
         this.teacherId = teacherId;
         this.institute = institute;
         this.major = major;
-        this.year = year;
-        this.team = team;
         this.totalCount = totalCount;
         this.name = name;
     }
 
-    public Long getTeachingClassId() {
+    public Integer getTeachingClassId() {
         return teachingClassId;
     }
 
-    public void setTeachingClassId(Long teachingClassId) {
+    public void setTeachingClassId(Integer teachingClassId) {
         this.teachingClassId = teachingClassId;
     }
 
-    public Long getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(Long teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 
@@ -78,27 +73,20 @@ public class TeachingClass {
         this.major = major;
     }
 
-    public String getYear() {
-        return year;
-    }
 
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public String getTeam() {
-        return team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }
-
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return totalCount;
     }
 
-    public void setTotalCount(Long totalCount) {
+    public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 }

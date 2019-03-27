@@ -1,0 +1,60 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: supermac
+  Date: 2019-03-27
+  Time: 11:25
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function showCustomer(str)
+        {
+            var xmlhttp;
+            if (str=="")
+            {
+                document.getElementById("txtHint").innerHTML="";
+                return;
+            }
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","test?q="+str,true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+
+<form action="">
+    <select name="customers" onchange="showCustomer(this.value)" style="font-family:Verdana, Arial, Helvetica, sans-serif;">
+        <option value="APPLE">Apple Computer, Inc.</option>
+        <option value="BAIDU ">BAIDU, Inc</option>
+        <option value="Canon">Canon USA, Inc.</option>
+        <option value="Google">Google, Inc.</option>
+        <option value="Nokia">Nokia Corporation</option>
+        <option value="SONY">Sony Corporation of America</option>
+    </select>
+</form>
+<br>
+<div id="txtHint">客户信息将显示在这...</div>
+
+</body>
+</html>

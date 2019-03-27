@@ -5,56 +5,65 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class ClassUse {
-    private Long classUseId;
-    private Long classId;
-    private String week;
-    private String time;
+    private Integer classUseId;
+    private Integer classId;
+    private Integer week;
+    private Integer time;
+    private Integer day;
 
     public ClassUse() {
     }
 
-    public ClassUse(Long classId, String week, String time) {
+    public ClassUse(Integer classId, Integer week, Integer time) {
         this.classId = classId;
         this.week = week;
         this.time = time;
     }
 
-    public ClassUse(Long classUseId, Long classId, String week, String time) {
+    public ClassUse(Integer classUseId, Integer classId, Integer week, Integer time) {
         this.classUseId = classUseId;
         this.classId = classId;
         this.week = week;
         this.time = time;
     }
 
-    public Long getClassUseId() {
+    public Integer getClassUseId() {
         return classUseId;
     }
 
-    public void setClassUseId(Long classUseId) {
+    public void setClassUseId(Integer classUseId) {
         this.classUseId = classUseId;
     }
 
-    public Long getClassId() {
+    public Integer getClassId() {
         return classId;
     }
 
-    public void setClassId(Long classId) {
+    public void setClassId(Integer classId) {
         this.classId = classId;
     }
 
-    public String getWeek() {
+    public Integer getWeek() {
         return week;
     }
 
-    public void setWeek(String week) {
+    public void setWeek(Integer week) {
         this.week = week;
     }
 
-    public String getTime() {
+    public Integer getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Integer time) {
         this.time = time;
+    }
+
+    public Integer getDay() {
+        return day;
+    }
+
+    public void setDay(Integer day) {
+        this.day = day;
     }
 }

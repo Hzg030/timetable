@@ -11,6 +11,6 @@ public class TestServlet extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        response.getWriter().print("hello woru man");
+        response.getWriter().print(request.getParameter("q"));
     }
 }

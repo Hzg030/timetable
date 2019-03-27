@@ -5,23 +5,25 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class TimeTable {
-    private Long timetableId;
-    private Long teachingClassId;
-    private Long teacherId;
-    private String week;
-    private String time;
+    private Integer timetableId;
+    private Integer teachingClassId;
+    private Integer teacherId;
+    private Integer roomId;
+    private Integer week;
+    private Integer time;
+    private Integer day;
 
     public TimeTable() {
     }
 
-    public TimeTable(Long teachingClassId, Long teacherId, String week, String time) {
+    public TimeTable(Integer teachingClassId, Integer teacherId, Integer week, Integer time) {
         this.teachingClassId = teachingClassId;
         this.teacherId = teacherId;
         this.week = week;
         this.time = time;
     }
 
-    public TimeTable(Long timetableId, Long teachingClassId, Long teacherId, String week, String time) {
+    public TimeTable(Integer timetableId, Integer teachingClassId, Integer teacherId, Integer week, Integer time) {
         this.timetableId = timetableId;
         this.teachingClassId = teachingClassId;
         this.teacherId = teacherId;
@@ -29,43 +31,59 @@ public class TimeTable {
         this.time = time;
     }
 
-    public Long getTimetableId() {
+    public Integer getTimetableId() {
         return timetableId;
     }
 
-    public void setTimetableId(Long timetableId) {
+    public void setTimetableId(Integer timetableId) {
         this.timetableId = timetableId;
     }
 
-    public Long getTeachingClassId() {
+    public Integer getTeachingClassId() {
         return teachingClassId;
     }
 
-    public void setTeachingClassId(Long teachingClassId) {
+    public void setTeachingClassId(Integer teachingClassId) {
         this.teachingClassId = teachingClassId;
     }
 
-    public Long getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(Long teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 
-    public String getWeek() {
+    public Integer getWeek() {
         return week;
     }
 
-    public void setWeek(String week) {
+    public void setWeek(Integer week) {
         this.week = week;
     }
 
-    public String getTime() {
+    public Integer getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Integer time) {
         this.time = time;
+    }
+
+    public Integer getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(Integer roomId) {
+        this.roomId = roomId;
+    }
+
+    public Integer getDay() {
+        return day;
+    }
+
+    public void setDay(Integer day) {
+        this.day = day;
     }
 }

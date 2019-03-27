@@ -5,7 +5,7 @@ package Dao.Entity;
  *  @Date 2019/3/19
  */
 public class Teacher {
-    private Long teacherId;
+    private Integer teacherId;
     private String username;
     private String password;
     private String name;
@@ -27,7 +27,7 @@ public class Teacher {
         this.email = email;
     }
 
-    public Teacher(Long teacherId, String username, String password, String name, String phoneNumber, String intitute, String major, String email) {
+    public Teacher(Integer teacherId, String username, String password, String name, String phoneNumber, String intitute, String major, String email) {
         this.teacherId = teacherId;
         this.username = username;
         this.password = password;
@@ -38,11 +38,11 @@ public class Teacher {
         this.email = email;
     }
 
-    public Long getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(Long teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 
