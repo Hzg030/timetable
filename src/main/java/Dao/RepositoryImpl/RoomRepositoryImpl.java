@@ -3,9 +3,18 @@ package Dao.RepositoryImpl;
 import Dao.Entity.Room;
 import Dao.Repository.Repository;
 
+import java.sql.Connection;
 import java.util.List;
 
 public class RoomRepositoryImpl implements Repository<Room> {
+
+    private Connection connection;
+
+    public RoomRepositoryImpl(Connection connection) {
+
+        this.connection = connection;
+    }
+
     @Override
     public void save(Room entity) {
         

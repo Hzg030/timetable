@@ -1,5 +1,6 @@
 package Dao.Repository;
 
+import java.io.IOException;
 import java.util.List;
 /**
  *  @author zenggui
@@ -7,15 +8,15 @@ import java.util.List;
  */
 public interface Repository<T> {
 
-    void save(T entity);
+    void save(T entity) throws Exception;
 
-    void update(T entity);
+    void update(T entity) throws Exception;
 
-    void delete(Long id);
+    void delete(Long id) throws Exception;
 
-    List<T> selectAll();
+    List<T> selectAll() throws Exception;
 
-    T selectById(Long id);
+    T selectById(Long id) throws Exception;
 
-    List<T> selectByEntity(T entity);
+    List<T> selectByEntity(T entity) throws Exception;
 }

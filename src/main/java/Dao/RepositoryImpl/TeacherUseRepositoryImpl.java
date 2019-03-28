@@ -12,32 +12,22 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class TeacherUseRepositoryImpl implements Repository<TeacherUse> {
+
+    private Connection connection;
+
+    public TeacherUseRepositoryImpl(Connection connection) {
+        this.connection = connection;
+    }
+
     @Override
-    public void save(TeacherUse entity) {
-        Connection connection = null;
-        try {
-            connection = new SqlUtil().getConnection();
-            String sql = "insert into teacheruse (teacherId, week, time,day) value (?,?,?,?)";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,entity.getTeacherId());
-            preparedStatement.setInt(2,entity.getWeek());
-            preparedStatement.setInt(3,entity.getTime());
-            preparedStatement.setInt(4,entity.getDay());
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            if(connection!=null){
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+    public void save(TeacherUse entity) throws Exception{
+        String sql = "insert into teacheruse (teacherId, week, time,day) value (?,?,?,?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1,entity.getTeacherId());
+        preparedStatement.setInt(2,entity.getWeek());
+        preparedStatement.setInt(3,entity.getTime());
+        preparedStatement.setInt(4,entity.getDay());
+        preparedStatement.executeUpdate();
     }
 
     @Override
@@ -65,35 +55,16 @@ public class TeacherUseRepositoryImpl implements Repository<TeacherUse> {
         return null;
     }
 
-    public boolean check(int teacherId,int week,int time,int day){
-        Connection connection = null;
+    public boolean check(int teacherId,int week,int time,int day) throws Exception {
         String sql = "select * from teacheruse where teacherId = ? and week = ? and time = ? and day = ?";
-        try {
-            connection = new SqlUtil().getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,teacherId);
-            preparedStatement.setInt(2,week);
-            preparedStatement.setInt(3,time);
-            preparedStatement.setInt(4,day);
-            ResultSet result =  preparedStatement.executeQuery();
-            if(result.next()){
-                return true;
-            }
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                if(connection!=null){
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, teacherId);
+        preparedStatement.setInt(2, week);
+        preparedStatement.setInt(3, time);
+        preparedStatement.setInt(4, day);
+        ResultSet result = preparedStatement.executeQuery();
+        if (result.next()) {
+            return true;
         }
         return false;
     }

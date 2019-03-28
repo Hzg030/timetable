@@ -3,9 +3,17 @@ package Dao.RepositoryImpl;
 import Dao.Entity.ClassMapping;
 import Dao.Repository.Repository;
 
+import java.sql.Connection;
 import java.util.List;
 
 public class ClassMappingRepositoryImpl implements Repository<ClassMapping> {
+
+    private Connection connection;
+
+    public ClassMappingRepositoryImpl(Connection connection) {
+        this.connection = connection;
+    }
+
     @Override
     public void save(ClassMapping entity) {
 
