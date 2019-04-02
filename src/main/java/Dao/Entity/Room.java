@@ -8,19 +8,22 @@ public class Room {
     private Integer roomId;
     private String roomNumber;
     private Integer buildingId;
+    private Integer number;
 
     public Room() {
     }
 
-    public Room(String roomNumber, Integer buildingId) {
+    public Room(String roomNumber, Integer buildingId, Integer number) {
         this.roomNumber = roomNumber;
         this.buildingId = buildingId;
+        this.number = number;
     }
 
-    public Room(Integer roomId, String roomNumber, Integer buildingId) {
+    public Room(Integer roomId, String roomNumber, Integer buildingId, Integer number) {
         this.roomId = roomId;
         this.roomNumber = roomNumber;
         this.buildingId = buildingId;
+        this.number = number;
     }
 
     public Integer getRoomId() {
@@ -45,5 +48,13 @@ public class Room {
 
     public void setBuildingId(Integer buildingId) {
         this.buildingId = buildingId;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 }

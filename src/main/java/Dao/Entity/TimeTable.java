@@ -23,12 +23,14 @@ public class TimeTable {
         this.time = time;
     }
 
-    public TimeTable(Integer timetableId, Integer teachingClassId, Integer teacherId, Integer week, Integer time) {
+    public TimeTable(Integer timetableId, Integer teachingClassId, Integer teacherId, Integer roomId,Integer week, Integer time,Integer day) {
         this.timetableId = timetableId;
         this.teachingClassId = teachingClassId;
         this.teacherId = teacherId;
+        this.roomId = roomId;
         this.week = week;
         this.time = time;
+        this.day = day;
     }
 
     public Integer getTimetableId() {

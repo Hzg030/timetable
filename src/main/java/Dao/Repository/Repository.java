@@ -8,6 +8,8 @@ import java.util.List;
  */
 public interface Repository<T> {
 
+    int PAGE_SIZE = 5;
+
     void save(T entity) throws Exception;
 
     void update(T entity) throws Exception;

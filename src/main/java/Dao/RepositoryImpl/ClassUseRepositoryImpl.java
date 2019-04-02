@@ -50,13 +50,14 @@ public class ClassUseRepositoryImpl implements Repository<ClassUse> {
     public List<ClassUse> selectByEntity(ClassUse entity) {
         return null;
     }
-
-    public boolean check(int classid,int week,int time) throws Exception{
-        String sql = "select * from classuse where classId = ? and week = ? and time = ? ";
+//检测该教室是否冲突
+    public boolean check(int classid,int week,int time,int day) throws Exception{
+        String sql = "select * from classuse where classId = ? and week = ? and time = ? and day = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1,classid);
         preparedStatement.setInt(2,week);
         preparedStatement.setInt(3,time);
+        preparedStatement.setInt(4,day);
         ResultSet result =  preparedStatement.executeQuery();
         if(result.next()){
             return true;

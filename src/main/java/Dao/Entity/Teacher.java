@@ -11,30 +11,27 @@ public class Teacher {
     private String name;
     private String phoneNumber;
     private String intitute;
-    private String major;
     private String email;
 
     public Teacher() {
     }
 
-    public Teacher(String username, String password, String name, String phoneNumber, String intitute, String major, String email) {
+    public Teacher(String username, String password, String name, String phoneNumber, String intitute, String email) {
         this.username = username;
         this.password = password;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.intitute = intitute;
-        this.major = major;
         this.email = email;
     }
 
-    public Teacher(Integer teacherId, String username, String password, String name, String phoneNumber, String intitute, String major, String email) {
+    public Teacher(Integer teacherId, String username, String password, String name, String phoneNumber, String intitute, String email) {
         this.teacherId = teacherId;
         this.username = username;
         this.password = password;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.intitute = intitute;
-        this.major = major;
         this.email = email;
     }
 
@@ -84,14 +81,6 @@ public class Teacher {
 
     public void setIntitute(String intitute) {
         this.intitute = intitute;
-    }
-
-    public String getMajor() {
-        return major;
-    }
-
-    public void setMajor(String major) {
-        this.major = major;
     }
 
     public String getEmail() {
